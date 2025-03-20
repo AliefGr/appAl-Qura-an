@@ -1,12 +1,13 @@
 import { Surah } from '../../types/surah'
 import ChevronRightIcon from '../../assets/ChevronRightIcon.svg'
+import AyatBackgroundImage from '../../assets/AyatBackgroundImage.png'
 
 type DetailInfoProps = {
     surah : Surah
 }
 const DetailSurahInfo = ({surah} : DetailInfoProps) => {
   return (
-    <div className="bg-[url('src/assets/AyatBackgroundImage.png')] bg-no-repeat bg-cover rounded-2xl px-4 pt-8 relative">
+    <div className=" bg-no-repeat bg-cover rounded-2xl px-4 pt-8 relative" style={{backgroundImage : `url(${AyatBackgroundImage})`}}>
         <div className='mb-10'>
             <p className='text-white font-bold text-2xl'>{surah.namaLatin}</p>
             <p className='text-white/60 font-medium'>{surah.arti}</p>
